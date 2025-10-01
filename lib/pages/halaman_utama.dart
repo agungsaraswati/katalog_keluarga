@@ -22,7 +22,7 @@ class _HalamanUtamaState extends State<HalamanUtama> {
     super.initState();
     final base = kIsWeb
         ? 'http://localhost:8000/api/keluarga'
-        : 'http://192.168.18.192:8000/api/keluarga';
+        : 'http://192.168.18.223:8000/api/keluarga';
     service = AnggotaService(baseUrl: base);
     futureAnggota = service.fetchAnggota();
   }
@@ -104,9 +104,13 @@ class _HalamanUtamaState extends State<HalamanUtama> {
                       // Map AnggotaModel -> AnggotaKeluarga
                       final anggota = AnggotaKeluarga(
                         nama: a.nama,
+                        namaLengkap: a.namaLengkap,
                         hubungan: a.hubungan,
                         tanggalLahir: a.tanggalLahir,
                         fotoProfil: _pickFoto(a),
+                        telepon: a.telepon ?? '-',
+                        email: a.email ?? '-',
+                        nik: a.nik,
                       );
 
                       return GestureDetector(
