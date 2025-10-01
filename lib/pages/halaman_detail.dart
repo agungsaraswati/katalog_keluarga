@@ -58,7 +58,9 @@ class HalamanDetail extends StatelessWidget {
                   // Kartu Bio
                   Card(
                     color: const Color(0xFF3C4455),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
@@ -66,13 +68,20 @@ class HalamanDetail extends StatelessWidget {
                         children: [
                           Text(
                             anggota.hubungan,
-                            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                            style: const TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                             textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 8),
                           Text(
                             'Lahir pada ${anggota.tanggalLahir}',
-                            style: const TextStyle(fontSize: 16, color: Colors.white70),
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.white70,
+                            ),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -83,22 +92,41 @@ class HalamanDetail extends StatelessWidget {
                   // Kartu Kontak
                   Card(
                     color: const Color(0xFF3C4455),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                     child: Column(
                       children: [
                         ListTile(
-                          leading: const Icon(Icons.phone, color: Colors.white70),
+                          leading: const Icon(
+                            Icons.phone,
+                            color: Colors.white70,
+                          ),
                           title: Text(
                             anggota.telepon,
-                            style: const TextStyle(color: Colors.white, fontSize: 16),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
-                        const Divider(height: 1, indent: 16, endIndent: 16, color: Colors.white24),
+                        const Divider(
+                          height: 1,
+                          indent: 16,
+                          endIndent: 16,
+                          color: Colors.white24,
+                        ),
                         ListTile(
-                          leading: const Icon(Icons.email, color: Colors.white70),
+                          leading: const Icon(
+                            Icons.email,
+                            color: Colors.white70,
+                          ),
                           title: Text(
                             anggota.email,
-                            style: const TextStyle(color: Colors.white, fontSize: 16),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ],
