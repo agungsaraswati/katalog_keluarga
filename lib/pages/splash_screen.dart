@@ -26,7 +26,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFAF9F6), // Warna latar belakang putih gading
+      backgroundColor: const Color(
+        0xFFFAF9F6,
+      ), // Warna latar belakang putih gading
       body: Stack(
         children: [
           // Lingkaran Besar Kiri Atas
@@ -94,13 +96,17 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-          
+
           // Konten Utama (Ikon & Teks)
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                Icon(Icons.family_restroom_rounded, size: 100, color: Color(0xFF232B3B)), // Warna ikon gelap
+                Icon(
+                  Icons.family_restroom_rounded,
+                  size: 100,
+                  color: Color(0xFF232B3B),
+                ), // Warna ikon gelap
                 SizedBox(height: 20),
                 Text(
                   'Choise Family', // Ganti teks sesuai Figma
